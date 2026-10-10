@@ -17,7 +17,7 @@ function required(name: string): string {
 }
 
 export const BASE_URL =
-  process.env.BASE_URL ?? 'https://liuxian496.github.io/litten-form/';
+  process.env.BASE_URL ?? 'https://6ac70cb7870df8e554fb05ff-jcxiqbiehx.chromatic.com/';
 
 /**
  * 用户认证信息文件路径
