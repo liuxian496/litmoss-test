@@ -2,7 +2,7 @@
 
 基于 **Playwright + TypeScript** 的端到端（E2E）自动化测试仓库。
 
-示例被测站点是一个 Storybook 应用（`litten-form`），所有业务控件渲染在 `iframe[title="storybook-preview-iframe"]` 内部，因此页面对象统一以 `page.frameLocator(...)` 作为根定位器。
+示例被测站点是一个 Storybook 应用（`litmoss-form`），所有业务控件渲染在 `iframe[title="storybook-preview-iframe"]` 内部，因此页面对象统一以 `page.frameLocator(...)` 作为根定位器。
 
 ---
 
@@ -37,11 +37,11 @@ cp .env.example .env
 所有环境变量由 [src/utils/env.ts](src/utils/env.ts) 统一加载（内部调用 `dotenv.config()`）。
 本地开发复制 `.env.example` 为 `.env` 后填写；CI 环境在 **GitLab CI/CD Variables** 中配置同名变量。
 
-| 变量                 | 是否必填       | 说明                                                                       |
-|----------------------|----------------|----------------------------------------------------------------------------|
-| `BASE_URL`           | 否（有默认值） | 被测站点根地址。未设置时回退为 `https://liuxian496.github.io/litten-form/` |
-| `TEST_USER_EMAIL`    | 当前不需要     | 测试账号邮箱，建议豁免 MFA。仅在接入需要鉴权的应用后必填                   |
-| `TEST_USER_PASSWORD` | 当前不需要     | 测试账号密码。仅在接入需要鉴权的应用后必填                                 |
+| 变量                 | 是否必填       | 说明                                                                                        |
+|----------------------|----------------|---------------------------------------------------------------------------------------------|
+| `BASE_URL`           | 否（有默认值） | 被测站点根地址。未设置时回退为 `https://6ac70cb7870df8e554fb05ff-jcxiqbiehx.chromatic.com/` |
+| `TEST_USER_EMAIL`    | 当前不需要     | 测试账号邮箱，建议豁免 MFA。仅在接入需要鉴权的应用后必填                                    |
+| `TEST_USER_PASSWORD` | 当前不需要     | 测试账号密码。仅在接入需要鉴权的应用后必填                                                  |
 
 当前被测站点为公开 Storybook，不读取凭据变量，因此三项均可不配置直接运行。
 

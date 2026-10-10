@@ -7,7 +7,7 @@ export class HomePage {
 
   constructor(page: Page) {
     this.page = page;
-    this.logo = page.getByRole('link', { name: 'LittenForm' });
+    this.logo = page.getByRole('link', { name: 'LitmossForm' });
   }
 
   /**
